@@ -4,7 +4,7 @@ const path = require("path");
 const config = {
   entry: ["babel-polyfill", "./src/index.js"],
   output: {
-    path: path.resolve(__dirname, "src/dist"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
   module: {
@@ -18,7 +18,7 @@ const config = {
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
-    contentBase: path.join(__dirname, "src/dist"),
+    contentBase: path.join(__dirname, "dist"),
     hot: true,
     port: 3000
   }
