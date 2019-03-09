@@ -20,7 +20,7 @@
 ### Unit Testing
 
 - [ ] [Jest](http://facebook.github.io/jest/)
-- [ ] [Enzyme](http://airbnb.io/enzyme/)
+- [ ] [react testing library](https://github.com/kentcdodds/react-testing-library)
 
 ### Linting
 
