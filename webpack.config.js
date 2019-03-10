@@ -2,7 +2,7 @@ const webpack = require("webpack"); // eslint-disable-line
 const path = require("path");
 
 const config = {
-  entry: ["babel-polyfill", "./src/index.js"],
+  entry: ["babel-polyfill", "./src/App.module.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
@@ -18,6 +18,8 @@ const config = {
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
+    publicPath: "/",
+    historyApiFallback: true,
     contentBase: path.join(__dirname, "dist"),
     hot: true,
     port: 3000
