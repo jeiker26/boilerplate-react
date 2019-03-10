@@ -47,26 +47,15 @@ export const Header = () => {
               {t("error-404-title")}
             </Link>
           </li>
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              {t("change-language-title")}
+          <li className="nav-item">
+            <a className="nav-link">
+              {i18n.language === "en" && (
+                <span onClick={() => handleChangeLanguage("es")}>{t("language-title-es")}</span>
+              )}
+              {i18n.language === "es" && (
+                <span onClick={() => handleChangeLanguage("en")}>{t("language-title-en")}</span>
+              )}
             </a>
-            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a className="dropdown-item" href="#" onClick={() => handleChangeLanguage("es")}>
-                {t("language-title-es")}
-              </a>
-              <a className="dropdown-item" href="#" onClick={() => handleChangeLanguage("en")}>
-                {t("language-title-en")}
-              </a>
-            </div>
           </li>
         </ul>
       </div>

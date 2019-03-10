@@ -8,7 +8,7 @@ const resources = {
       "error-404-title": "Error",
       "change-language-title": "Change language",
       "language-title-en": "English",
-      "language-title-es": "Spanish",
+      "language-title-es": "Español",
       "not-found-text": "Page 404, not found",
       "init-page-text": "Init page"
     }
@@ -21,8 +21,8 @@ const resources = {
       "hello-title": "Hola",
       "error-404-title": "Error",
       "change-language-title": "Cambiar idioma",
-      "language-title-en": "Ingles",
-      "language-title-es": "Español",
+      "language-title-en": "English",
+      "language-title-es": "Spanish",
       "not-found-text": "Página 404, no encontrado",
       "init-page-text": "Página de inicio"
     }
