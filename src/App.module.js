@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
 /** Config */
-import "../i18n";
-import { config } from "../react.config";
-import { configReactProject } from "src/utils";
+import "src/core/i18n";
+import { config } from "src/core/react.config";
+import { configReactProject } from "src/core/utils/configReact";
 
 /** Components */
-import { RouterWrapper } from "src/utils/RouterComponent";
+import { RouterWrapper } from "src/core/utils/RouterComponent";
 import { App } from "src/App.component";
 import { Header } from "src/components/header/Header";
 

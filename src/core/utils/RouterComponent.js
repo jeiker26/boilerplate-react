@@ -4,7 +4,7 @@ import { Switch } from "react-router-dom";
 
 export const RouterWrapper = ({ match, router }) => (
   <Switch>
-    <Route exact path={`${match.path}`} component={router.component} />
+    {router.component && <Route exact path={`${match.path}`} component={router.component} />}
     {router.childrens.map(section => (
       <Route
         key={section.route}
