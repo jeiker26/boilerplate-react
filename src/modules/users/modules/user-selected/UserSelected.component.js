@@ -1,9 +1,9 @@
 import React from "react";
 
-export const UserSelect = () => {
+export const UserSelect = ({ match }) => {
   return (
     <ol>
-      <li>John</li>
+      <li>{match.params.id}</li>
     </ol>
   );
 };

@@ -5,6 +5,7 @@ import { Users } from "src/modules/users/Users.component";
 import { UserSelectModule } from "src/modules/users/modules/user-selected/UserSelected.module";
 
 const router = {
+  component: Users,
   childrens: [
     {
       route: "/:id",
@@ -13,10 +14,4 @@ const router = {
   ]
 };
 
-export const UsersModule = props => (
-  <React.Fragment>
-    <Users baseUrl={props.match.path} />
-
-    <RouterWrapper router={router} {...props} />
-  </React.Fragment>
-);
+export const UsersModule = props => <RouterWrapper router={router} {...props} />;

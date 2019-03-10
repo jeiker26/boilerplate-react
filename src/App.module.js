@@ -7,10 +7,13 @@ import "../i18n";
 import { config } from "../react.config";
 import { configReactProject } from "src/utils";
 
-/** Modules */
-import { App } from "src/app.component";
+/** Components */
 import { RouterWrapper } from "src/utils/RouterComponent";
-import { NotFound } from "src/modules/not-found/NotFound";
+import { App } from "src/App.component";
+import { Header } from "src/components/header/Header";
+
+/** Modules */
+import { NotFoundModule } from "src/modules/not-found/NotFound.module";
 import { HelloModule } from "src/modules/hello/Hello.module";
 import { UsersModule } from "src/modules/users/Users.module";
 
@@ -26,7 +29,7 @@ const router = {
       component: UsersModule
     }
   ],
-  notFound: NotFound
+  notFound: NotFoundModule
 };
 
 function AppModule() {
@@ -38,7 +41,10 @@ function AppModule() {
 
   return (
     <BrowserRouter basename={baseProject}>
-      <RouterWrapper match={{ path: baseProject }} router={router} />
+      <React.Fragment>
+        <Header />
+        <RouterWrapper match={{ path: baseProject }} router={router} />
+      </React.Fragment>
     </BrowserRouter>
   );
 }

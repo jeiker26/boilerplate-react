@@ -1,12 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Users = () => {
   return (
     <ol>
-      <li>John</li>
-      <li>Jesus</li>
-      <li>Pepe</li>
-      <li>Juan</li>
+      <li>
+        <Link to="/users/john">John</Link>
+      </li>
+      <li>
+        <Link to="/users/jesus">Jesus</Link>
+      </li>
+      <li>
+        <Link to="/users/pepe">Pepe</Link>
+      </li>
+      <li>
+        <Link to="/users/juan">Juan</Link>
+      </li>
     </ol>
   );
 };
