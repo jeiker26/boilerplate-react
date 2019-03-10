@@ -35,3 +35,13 @@ The `babel-plugin-module-resolver`package xxx helps you to get all the routes st
 
 
 ## Project Structure
+The project is structured in modules, an initial load of `App.module.js` is made. The modules, although it does not have why, are associated to routes. The most important thing is to understand the concept of the module:
+** Module **: folder composed of a file `example.module.js` and `example.component.js`. Also, if necessary, a `modules` folder and/or a `components` folder.
+- `example.module.js`: contains the child routes and the main component, it can also be used as `layout`.
+- `example.component.js`: React component.
+- `/modules`: submodules / sub routes.
+- `/components`: components of `example.component.js`.
+Modules can be nested.
+
+Module example: 
+![alt text](https://raw.githubusercontent.com/jeiker26/boilerplate-react/master/docs/images/example.module.png "Module example")
