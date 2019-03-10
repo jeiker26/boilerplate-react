@@ -43,5 +43,4 @@ The project is structured in modules, an initial load of `App.module.js` is made
 - `/components`: components of `example.component.js`.
 Modules can be nested.
 
-Module example: 
 ![alt text](https://raw.githubusercontent.com/jeiker26/boilerplate-react/master/docs/images/example.module.png "Module example")
