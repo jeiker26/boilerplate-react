@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import "../i18n";
-import { App } from "./app";
+import { configReactProject } from "../utils";
+import { config } from "../react.config";
+import { Hello } from "src/Hello";
+
+function App() {
+  useEffect(() => {
+    configReactProject(config);
+  });
+
+  return <Hello />;
+}
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

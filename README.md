@@ -28,5 +28,10 @@
 - [ ] [Prettier](https://prettier.io/)
 - [ ] [stylelint](https://stylelint.io/)
 
+### Config/Setup
+In app component, `configReactProject` allows you to configure your project by adding or deleting, for example: scripts and styles.
+
+The `babel-plugin-module-resolver`package xxx helps you to get all the routes started by *src* configured in the `.babelrc` file.
+
 
 ## Project Structure
