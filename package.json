@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint src",
     "test": "BABEL_ENV=test jest  --watchAll --no-cache --config ./jest.config.json",
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development"
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "storybook": "start-storybook"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/react": "^5.0.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
