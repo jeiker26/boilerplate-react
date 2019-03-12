@@ -33,6 +33,9 @@ In app component, `configReactProject` allows you to configure your project by a
 
 The `babel-plugin-module-resolver`package xxx helps you to get all the routes started by *src* configured in the `.babelrc` file.
 
+config sass: https://github.com/webpack-contrib/sass-loader
+config webpack and babel: https://medium.freecodecamp.org/how-to-set-up-deploy-your-react-app-from-scratch-using-webpack-and-babel-a669891033d4
+
 
 ## Project Structure
 The project is structured in modules, an initial load of `App.module.js` is made. The modules, although it does not have why, are associated to routes. The most important thing is to understand the concept of the module:

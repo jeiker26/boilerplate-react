@@ -50,5 +50,3 @@ function AppModule() {
 }
 
 ReactDOM.render(<AppModule />, document.getElementById("root"));
-
-module.hot.accept();
