@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
-    "test": "BABEL_ENV=test jest  --watchAll --no-cache --config ./jest.config.json",
-    "start": "webpack-dev-server --open --config ./webpack.dev.js",
-    "build": "webpack --config ./webpack.prod.js",
-    "storybook": "start-storybook",
-    "eslint-fix": "eslint --fix \"src/**/*.js\""
+    "test": "BABEL_ENV=test jest  --watchAll --no-cache --config ./config/jest.config.json",
+    "start": "webpack-dev-server --open --config ./config/webpack.dev.js",
+    "build": "webpack --config ./config/webpack.prod.js",
+    "storybook": "start-storybook"
   },
   "repository": {
     "type": "git",

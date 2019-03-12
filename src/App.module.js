@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
 /** Config */
 import "src/core/i18n";
-import { config } from "src/core/react.config";
-import { configReactProject } from "src/core/utils/configReact";
 
 /** Components */
-import { RouterWrapper } from "src/core/utils/RouterComponent";
+import { RouterWrapper } from "src/core/routing/RouterComponent";
 import { App } from "src/App.component";
 import { Header } from "src/components/header/Header";
 
@@ -34,10 +32,6 @@ const router = {
 
 function AppModule() {
   const baseProject = "/";
-
-  useEffect(() => {
-    configReactProject(config);
-  });
 
   return (
     <BrowserRouter basename={baseProject}>

@@ -15,7 +15,7 @@
   },
   "notify": true,
   "roots": ["<rootDir>/src"],
-  "setupFilesAfterEnv": ["<rootDir>/rtl.setup.js"],
+  "setupFilesAfterEnv": ["<rootDir>/config/rtl.setup.js"],
   "transform": {
     "^.+\\.(js|jsx)?$": "babel-jest"
   },

@@ -5,10 +5,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
+const distFolder = "../dist";
+const appFolder = "../src";
+const entryFile = "./src/App.module.js";
+
 module.exports = {
-  entry: ["babel-polyfill", "./src/App.module.js"],
+  entry: ["babel-polyfill", entryFile],
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, distFolder),
     filename: "[name].bundle.js",
     publicPath: "/"
   },
@@ -49,13 +53,13 @@ module.exports = {
       chunkFilename: "[id].css"
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src/index.html")
+      template: path.resolve(__dirname, appFolder + "/index.html")
     })
   ],
   devServer: {
     publicPath: "/",
     historyApiFallback: true,
-    contentBase: path.join(__dirname, "dist")
+    contentBase: path.join(__dirname, distFolder)
   },
   optimization: {
     namedModules: false,
