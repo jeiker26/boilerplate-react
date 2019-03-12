@@ -1,7 +1,7 @@
 import React from "react";
 import { RouterWrapper } from "src/core/routing/RouterComponent";
 
-import { Hello } from "src/modules/hello/Hello.component";
+import { Hello } from "src/app/modules/hello/Hello.component";
 
 const router = {
   component: Hello,

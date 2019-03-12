@@ -1,7 +1,7 @@
 import React from "react";
 import { RouterWrapper } from "src/core/routing/RouterComponent";
 
-import { NotFound } from "src/modules/not-found/NotFound.component";
+import { NotFound } from "src/app/modules/not-found/NotFound.component";
 
 const router = {
   component: false,

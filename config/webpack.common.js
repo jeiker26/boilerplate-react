@@ -7,7 +7,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 const distFolder = "../dist";
 const appFolder = "../src";
-const entryFile = "./src/App.module.js";
+const entryFile = "./src/index.js";
 
 module.exports = {
   entry: ["babel-polyfill", entryFile],

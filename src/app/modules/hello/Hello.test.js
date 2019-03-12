@@ -1,6 +1,6 @@
 import React from "react";
 import { render, cleanup } from "react-testing-library";
-import { Hello } from "src/Hello";
+import { Hello } from "src/app/modules/hello/Hello.component";
 
 afterEach(cleanup);
 describe("Hello suite", () => {

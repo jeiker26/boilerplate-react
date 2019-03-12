@@ -1,7 +1,7 @@
 import React from "react";
 import { RouterWrapper } from "src/core/routing/RouterComponent";
 
-import { UserSelect } from "src/modules/users/modules/user-selected/UserSelected.component";
+import { UserSelect } from "src/app/modules/users/modules/user-selected/UserSelected.component";
 
 const router = {
   component: UserSelect,
