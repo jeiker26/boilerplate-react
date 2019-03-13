@@ -1,10 +1,9 @@
 {
   "collectCoverage": true,
   "collectCoverageFrom": [
-    "<rootDir>/tests/**/*.{js,jsx}",
-    "<rootDir>/src/**/*.{js,jsx}"
+    "<rootDir>/../src/**/*.{js,jsx}"
   ],
-  "coverageDirectory": ".coverage",
+  "coverageDirectory": "../.coverage",
   "coverageThreshold": {
     "global": {
       "branches": 100,
@@ -14,11 +13,11 @@
     }
   },
   "notify": true,
-  "roots": ["<rootDir>/src"],
-  "setupFilesAfterEnv": ["<rootDir>/config/rtl.setup.js"],
+  "roots": ["<rootDir>/../src"],
+  "setupFilesAfterEnv": ["<rootDir>/rtl.setup.js"],
   "transform": {
     "^.+\\.(js|jsx)?$": "babel-jest"
   },
   "verbose": true,
-  "transformIgnorePatterns": ["<rootDir>/node_modules/"]
+  "transformIgnorePatterns": ["<rootDir>/../node_modules/"]
 }
