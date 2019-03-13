@@ -1,0 +1,24 @@
+.header {
+    background-color: darkslategrey;
+    .navbar {
+        display: flex;
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+
+            .nav-item {
+                margin-left: 2rem;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+                
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

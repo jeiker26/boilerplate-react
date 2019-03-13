@@ -29,12 +29,13 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: {
+            options: {}
+            /*options: {
               modules: true,
               sourceMap: true,
               importLoaders: 1,
               localIdentName: "[local]___[hash:base64:5]"
-            }
+            }*/
           },
           {
             loader: "postcss-loader",
