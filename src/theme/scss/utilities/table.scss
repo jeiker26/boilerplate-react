@@ -6,18 +6,18 @@
   margin: $spacer-7 0;
 
   th {
-    background-color: $neutral-base20;
+    background-color: $background-table;
   }
 
   th,
   td {
     padding: 2rem;
-    border: 0.1rem solid $neutral-base30;
+    border: 0.1rem solid $border-table;
   }
 
   @include media(media-xs) {
     tr {
-      border-bottom: 0.1rem solid $neutral-base30;
+      border-bottom: 0.1rem solid $border-table;
     }
 
     th,

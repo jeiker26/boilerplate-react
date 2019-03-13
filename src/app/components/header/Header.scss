@@ -1,5 +1,7 @@
+@import "src/theme/scss/support/index";
+
 .header {
-    background-color: darkslategrey;
+    background-color: $primary;
     .navbar {
         display: flex;
 

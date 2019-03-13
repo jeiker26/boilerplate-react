@@ -34,13 +34,13 @@ body {
   font-family: Lato, "Helvetica Neue",Arial,Helvetica,sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
-  color: $text-base;
+  color: black;
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
-  color: $text-base;
+  color: black;
 
   &:hover {
     text-decoration: none;
