@@ -1,0 +1,43 @@
+// -------- Miscellaneous --------
+
+.img-responsive {
+  height: auto;
+  width: 100%;
+}
+
+.icon-circle {
+  padding-left: $spacer-5;
+
+  &::before {
+    content: "\2022";
+    color: $global-light;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.6rem;
+    margin-left: -$spacer-5;
+    position: absolute;
+  }
+}
+
+
+// Box-shadows
+@for $i from 1 through length($shadows) {
+  $position: #{nth($shadows, $i)};
+  .shadow-#{$i} { box-shadow: #{$position}; }
+}
+
+
+// Positions
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.fixed-top {
+  position: fixed;
+  width: 100%;
+  z-index: $z-index-1;
+  top: 0;
+  left: 0;
+}
+

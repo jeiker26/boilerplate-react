@@ -1,0 +1,52 @@
+// stylelint-disable
+// -------- Flex utility classes -----------
+
+// Loop through the breakpoint values and generates flex
+// classes for the breakpoints established
+
+/* --------------How to use---------------- */
+//    .flex-xs-row
+//    .flex-md-content-start
+//    .flex-xl-justify-center
+/* ---------------------------------------- */
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include breakpoint($breakpoint) {
+
+    // Content
+    .d-#{$breakpoint}-flex {display: flex;}
+
+    .flex-#{$breakpoint}-row { flex-direction: row; }
+    .flex-#{$breakpoint}-row-reverse { flex-direction: row-reverse; }
+    .flex-#{$breakpoint}-column { flex-direction: column; }
+
+    .flex-#{$breakpoint}-wrap { flex-wrap: wrap; }
+    .flex-#{$breakpoint}-nowrap { flex-wrap: nowrap; }
+
+    .flex-#{$breakpoint}-justify-start { justify-content: flex-start; }
+    .flex-#{$breakpoint}-justify-end { justify-content: flex-end; }
+    .flex-#{$breakpoint}-justify-center { justify-content: center; }
+    .flex-#{$breakpoint}-justify-between { justify-content: space-between; }
+    .flex-#{$breakpoint}-justify-around { justify-content: space-around; }
+
+    .flex-#{$breakpoint}-items-start { align-items: flex-start; }
+    .flex-#{$breakpoint}-items-end { align-items: flex-end; }
+    .flex-#{$breakpoint}-items-center { align-items: center; }
+
+    .flex-#{$breakpoint}-content-start { align-content: flex-start; }
+    .flex-#{$breakpoint}-content-end { align-content: flex-end; }
+    .flex-#{$breakpoint}-content-center { align-content: center; }
+
+    // Item
+    .flex-#{$breakpoint}-auto { flex: 1 1 auto; }
+    .flex-#{$breakpoint}-shrink-0 { flex-shrink: 0; }
+
+    .flex-#{$breakpoint}-self-start { align-self: flex-start; }
+    .flex-#{$breakpoint}-self-end { align-self: flex-end; }
+    .flex-#{$breakpoint}-self-center { align-self: center; }
+
+    // Order
+    .flex-#{$breakpoint}-order-first { order: -1;}
+    .flex-#{$breakpoint}-order-last { order: 2; }
+  }
+}

@@ -1,0 +1,77 @@
+// -------- Breakpoint viewport sizes and media queries --------
+
+@mixin breakpoint($breakpoint) {
+  // Retrieves the value from the key
+  $value: map-get($grid-breakpoints, $breakpoint);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    576px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
+// Useful for making responsive utilities.
+//
+//    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    "-sm"
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Mixin for easy to use mediaqueries
+/* --------------How to use---------------- */
+//    @include media(media-md) {
+//      property: value;
+//    }
+/* ---------------------------------------- */
+@mixin media($range) {
+  @if $range == media-xs { // 0 - 575
+    @media (max-width: #{$width-sm - 1}) { @content; }
+  } @else if $range == media-sm { //576
+    @media (min-width: $width-sm) { @content; }
+  } @else if $range == media-md { //768
+    @media (min-width: $width-md) { @content; }
+  } @else if $range == media-lg { //1024
+    @media (min-width: $width-lg) { @content; }
+  } @else if $range == media-xl { //1200
+    @media (min-width: $width-xl) { @content; }
+  } @else if $range == media-xxl { //1440
+    @media (min-width: $width-xxl) { @content; }
+  }
+}

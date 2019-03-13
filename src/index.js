@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import "src/core/i18n"; // config i18n
-import { AppModule } from "src/app/App.module";
-import "./theme/styles/global.scss";
+import "src/lib/i18n"; // config i18n
+import { AppPage } from "src/app/App.page";
+import "src/theme/styles/main.scss";
 
 function Index() {
   return (
     <BrowserRouter>
-      <AppModule />
+      <AppPage />
     </BrowserRouter>
   );
 }

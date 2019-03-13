@@ -1,0 +1,32 @@
+// -------- Grid classes --------
+
+// Container widths
+// Set the container width, and override it for fixed navbars in media queries.
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+
+// Rows contain and clear the floats of your columns.
+.row {
+  @include make-row();
+}
+
+
+// Remove the negative margin from default .row
+// and then the horizontal padding from all immediate children columns.
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+// Columns
+@include make-grid-columns();

@@ -1,0 +1,32 @@
+// -------- Miscellaneous --------
+
+// Z-index
+
+/* --------------How to use---------------- */
+//     z-index: $z-index-1;
+/* ---------------------------------------- */
+
+$z-index-1: 1;
+$z-index-2: 2;
+$z-index-3: 3; // for menu and upper elements
+$z-index-4: 4; // for lightbox
+$z-index-5: 5; // for spinner
+
+
+// Shadows
+
+/* --------------How to use---------------- */
+//     box-shadow: $box-shadow-1;
+/* ---------------------------------------- */
+
+$box-shadow-1: -0.1rem 0.3rem 0.5rem 0 rgba($neutral-base30, 0.42);
+$box-shadow-2: -0.1rem 0.3rem 0.5rem 0 $neutral-base30;
+$box-shadow-3: -0.1rem 0.3rem 0.5rem 0 rgba($global-dark, 0.4);
+$box-shadow-4: -0.1rem 0.3rem 0.5rem 0 rgba($global-dark, 0.68);
+
+$shadows: (
+  $box-shadow-1,
+  $box-shadow-2,
+  $box-shadow-3,
+  $box-shadow-4
+) !default;

@@ -1,0 +1,92 @@
+// -------- Base reset --------
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 62.5% of 16px = 10px */
+  scroll-behavior: smooth;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// stylelint-disable
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+// stylelint-enable
+
+body {
+  font-family: Lato, "Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: $text-base;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $text-base;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+// Remove most spacing between table cells.
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  // Remove border radius added by Chroma macOS
+  border-radius: 0;
+}
+
+details {
+  summary { cursor: pointer; }
+
+  &:not([open]) {
+    // Set details content hidden by default for browsers that don't do this
+    > *:not(summary) { display: none; }
+  }
+}
+
+//TO-DO: Delete comment when refactor is complete
+//temporary fix add class: .img-responsive
+img {
+  //width: 100%;
+  display: block;
+}
+
+hr {
+  margin: 0;
+}
+
+//Generic classes for main structure
+.simply-content {
+  min-height: calc(100vh - 18rem);
+}

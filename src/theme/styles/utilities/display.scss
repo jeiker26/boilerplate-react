@@ -1,0 +1,50 @@
+// -------- Display utilities --------
+
+// General show/hide
+.hidden { display: none; }
+
+
+// Hide utilities for each breakpoint
+// Each hide utility only applies to one breakpoint range
+
+/* --------------How to use ---------------- */
+//    .hidden-sm
+//    .hidden-md
+//    .hidden-lg
+//    .hidden-xl
+/* ---------------------------------------- */
+
+@media (max-width: $width-sm) {
+  .hidden-sm { display: none; }
+}
+
+@media (min-width: $width-sm) and (max-width: $width-md) {
+  .hidden-md { display: none; }
+}
+
+@media (min-width: $width-md) and (max-width: #{$width-lg - 1}) {
+  .hidden-lg { display: none; }
+}
+
+@media (min-width: $width-lg) {
+  .hidden-xl { display: none; }
+}
+
+
+// Container widths
+
+/* --------------How to use ---------------- */
+//    .width-sm-full
+//    .width-sm-half
+//    .width-sm-third
+//    .width-sm-quarter
+/* ---------------------------------------- */
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include breakpoint($breakpoint) {
+    .width-#{$breakpoint}-full { width: 100%; }
+    .width-#{$breakpoint}-half { width: 50%; }
+    .width-#{$breakpoint}-third { width: 33.333%; }
+    .width-#{$breakpoint}-quarter { width: 25%; }
+  }
+}

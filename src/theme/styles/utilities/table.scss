@@ -1,0 +1,39 @@
+// -------- Tables --------
+
+// TO DO: estos estilos irán en el componente tabla.js cuando lo creemos
+
+.generic-table {
+  margin: $spacer-7 0;
+
+  th {
+    background-color: $neutral-base20;
+  }
+
+  th,
+  td {
+    padding: 2rem;
+    border: 0.1rem solid $neutral-base30;
+  }
+
+  @include media(media-xs) {
+    tr {
+      border-bottom: 0.1rem solid $neutral-base30;
+    }
+
+    th,
+    td {
+      width: 100%;
+      display: block;
+      border-bottom: 0;
+      border-top: 0;
+    }
+
+    td {
+      padding: 0 2rem 2rem;
+
+      &:first-child {
+        padding-top: 2rem;
+      }
+    }
+  }
+}

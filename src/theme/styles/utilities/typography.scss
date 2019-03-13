@@ -1,0 +1,98 @@
+.display-1 {
+  @include font-size($display1-font-size);
+}
+
+.display-2 {
+  @include font-size($display1-font-size);
+}
+
+.display-3 {
+  @include font-size($display1-font-size);
+}
+
+h1,
+.heading-1 {
+  @include font-size($h1-font-size);
+}
+
+h2,
+.heading-2 {
+  @include font-size($h2-font-size);
+}
+
+h3,
+.heading-3 {
+  @include font-size($h3-font-size);
+}
+
+h4,
+.heading-4 {
+  @include font-size($h4-font-size);
+}
+
+h5,
+.heading-5 {
+  @include font-size($h5-font-size);
+}
+
+h6,
+.heading-6 {
+  @include font-size($h6-font-size);
+}
+
+.body-base {
+  @include font-size($body-font-size);
+}
+
+.caption {
+  @include font-size($caption-font-size);
+}
+
+.legal {
+  @include font-size($legal-font-size);
+}
+
+.other {
+  @include font-size($other-font-size);
+}
+
+// Text weights
+.bold { font-weight: $fw-700; }
+.regular { font-weight: $fw-400;}
+.light { font-weight: $fw-300; }
+.italic { font-style: italic;   }
+
+
+// Heading utilities
+#{headings(3,6)} {
+  font-weight: $fw-400;
+}
+
+// Text alignments
+// TO DO: Cuando se definan las tipos, deberíamos de hacer un mapeo de los alignments de los textos
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+
+.text-md-center { // TO DO: esta regla desaparecerá cuando se definan las tipos
+  @include media(media-md) {
+    text-align: center;
+  }
+}
+
+//Lists
+.list {
+  li {
+    margin-bottom: $spacer-3;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--bullet {
+    @extend .list;
+    padding-left: $spacer-6;
+    list-style-type: disc;
+  }
+}

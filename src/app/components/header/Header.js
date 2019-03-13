@@ -27,12 +27,8 @@ export const Header = () => {
             <Link to="/not-found">{t("error-404-title")}</Link>
           </li>
           <li className="nav-item">
-            {i18n.language === "en" && (
-              <span onClick={() => handleChangeLanguage("es")}>{t("language-title-es")}</span>
-            )}
-            {i18n.language === "es" && (
-              <span onClick={() => handleChangeLanguage("en")}>{t("language-title-en")}</span>
-            )}
+            {<span onClick={() => handleChangeLanguage("es")}>{t("language-title-es")}</span>}
+            {<span onClick={() => handleChangeLanguage("en")}>{t("language-title-en")}</span>}
           </li>
         </ul>
       </nav>

@@ -38,12 +38,12 @@ config webpack and babel: https://medium.freecodecamp.org/how-to-set-up-deploy-y
 
 
 ## Project Structure
-The project is structured in modules, an initial load of `App.module.js` is made. The modules, although it does not have why, are associated to routes. The most important thing is to understand the concept of the module:
-** Module **: folder composed of a file `example.module.js` and `example.component.js`. Also, if necessary, a `modules` folder and/or a `components` folder.
-- `example.module.js`: contains the child routes and the main component, it can also be used as `layout`.
+The project is structured in pages, an initial load of `App.page.js` is made. The pages, although it does not have why, are associated to routes. The most important thing is to understand the concept of the page:
+** page **: folder composed of a file `example.page.js` and `example.component.js`. Also, if necessary, a `pages` folder and/or a `components` folder.
+- `example.page.js`: contains the child routes and the main component, it can also be used as `layout`.
 - `example.component.js`: React component.
-- `/modules`: submodules / sub routes.
+- `/pages`: submodules / sub routes.
 - `/components`: components of `example.component.js`.
 Modules can be nested.
 
-![alt text](https://raw.githubusercontent.com/jeiker26/boilerplate-react/master/docs/images/example.module.png "Module example")
+![alt text](https://raw.githubusercontent.com/jeiker26/boilerplate-react/master/docs/images/example.page.png "Module example")

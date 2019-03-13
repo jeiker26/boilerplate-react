@@ -1,0 +1,11 @@
+// -------- Animate system --------
+
+// Cubic
+
+/* --------------How to use---------------- */
+//     @extend %ease-out-cubic
+/* ---------------------------------------- */
+
+%ease-out-cubic {
+  transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}

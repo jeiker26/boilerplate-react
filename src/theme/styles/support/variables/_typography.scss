@@ -1,0 +1,87 @@
+// Font size variables
+/* --------------How to use---------------- */
+//     @include font-size($h5-font-size);
+/* ---------------------------------------- */
+
+$display1-font-size: (
+  xs:  (5.8rem, 1.2),
+  md:  (6.4rem, 1.2),
+  lg:  (8rem, 1.2)
+);
+
+$display2-font-size: (
+  xs:  (5.2rem, 1.2),
+  md:  (5.8rem, 1.2),
+  lg:  (7.2rem, 1.2)
+);
+
+$display3-font-size: (
+  xs:  (4.6rem, 1.2),
+  md:  (5.2rem, 1.2),
+  lg:  (6.4rem, 1.2)
+);
+
+$h1-font-size: (
+  xs:  (3.6rem, 1.2),
+  md:  (4rem, 1.2),
+  lg:  (5.8rem, 1.2)
+);
+
+$h2-font-size: (
+  xs:  (3.2rem, 1.2),
+  md:  (3.2rem, 1.2),
+  lg:  (4.6rem, 1.2)
+);
+
+$h3-font-size: (
+  xs:  (2.8rem, 1.2),
+  md:  (2.8rem, 1.2),
+  lg:  (3.2rem, 1.2)
+);
+
+$h4-font-size: (
+  xs:  (2.4rem, 1.2),
+  md:  (2.4rem, 1.2),
+  lg:  (2.8rem, 1.2)
+);
+
+$h5-font-size: (
+  xs:  (2rem, 1.2),
+  md:  (2rem, 1.2),
+  lg:  (2.4rem, 1.2)
+);
+
+$h6-font-size: (
+  xs:  (1.8rem, 1.5),
+  md:  (1.8rem, 1.5),
+  lg:  (2rem, 1.5)
+);
+
+$body-font-size: (
+  default: (1.6rem, 1.5)
+);
+
+$caption-font-size: (
+  default: (1.4rem, 1.5)
+);
+
+$legal-font-size: (
+  default: (1.2rem, 1.5)
+);
+
+$other-font-size: (
+  xs:  (1.2rem, 1.5),
+  md:  (1rem, 1.5),
+  lg:  (1rem, 1.5)
+);
+
+
+// Font weight variables
+
+/* --------------How to use---------------- */
+//     font-weight: $fw-700;
+/* ---------------------------------------- */
+
+$fw-700: 700;
+$fw-400: 400;
+$fw-300: 300;

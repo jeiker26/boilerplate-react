@@ -1,0 +1,59 @@
+// -------- Typography base --------
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin");
+// Headings
+// --------------------------------------------------
+#{headings(1,6)} {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Body text
+// --------------------------------------------------
+
+p {
+  margin: 0 0 $spacer-5 0;
+  
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:only-of-type {
+    margin: 0 0 $spacer-5 0;
+  }
+}
+
+small {
+  font-size: 90%;
+}
+
+blockquote {
+  margin: 0;
+}
+
+// Lists
+// --------------------------------------------------
+
+ul,
+ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+ol ol,
+ul ol {
+  list-style-type: lower-roman;
+}
+
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+dd {
+  margin-left: 0;
+}
