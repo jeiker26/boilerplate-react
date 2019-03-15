@@ -21,6 +21,7 @@
 
 - [ ] [Jest](http://facebook.github.io/jest/)
 - [ ] [react testing library](https://github.com/kentcdodds/react-testing-library)
+- [ ] [Cypress]()
 
 ### Linting
 

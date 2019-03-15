@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import "src/lib/i18n"; // config i18n
 import { AppPage } from "src/app/App.page";
-import "src/theme/styles/main.scss";
+import "src/theme/scss/main.scss";
 
 function Index() {
   return (

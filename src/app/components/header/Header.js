@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 
 export const Header = () => {
+  const idComponent = "header";
   const [t, i18n] = useTranslation();
 
   const handleChangeLanguage = language => {
@@ -15,20 +16,37 @@ export const Header = () => {
       <nav className="navbar">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link to="/">{t("home-title")}</Link>
+            <Link data-cy={`${idComponent}-link-home`} to="/">
+              {t("home-title")}
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/users">{t("users-title")}</Link>
+            <Link data-cy={`${idComponent}-link-users`} to="/users">
+              {t("users-title")}
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/hello">{t("hello-title")}</Link>
+            <Link data-cy={`${idComponent}-link-hello`} to="/hello">
+              {t("hello-title")}
+            </Link>
           </li>
           <li className="nav-item">
-            <Link to="/not-found">{t("error-404-title")}</Link>
-          </li>
-          <li className="nav-item">
-            {<span onClick={() => handleChangeLanguage("es")}>{t("language-title-es")}</span>}
-            {<span onClick={() => handleChangeLanguage("en")}>{t("language-title-en")}</span>}
+            {
+              <span
+                data-cy={`${idComponent}-change-language-es`}
+                onClick={() => handleChangeLanguage("es")}
+              >
+                {t("language-title-es")}
+              </span>
+            }
+            {
+              <span
+                data-cy={`${idComponent}-change-language-en`}
+                onClick={() => handleChangeLanguage("en")}
+              >
+                {t("language-title-en")}
+              </span>
+            }
           </li>
         </ul>
       </nav>
