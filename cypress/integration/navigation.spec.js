@@ -5,13 +5,13 @@ const scenario = () => {
 describe("My First Test", function() {
   it("Visits local project and change language", function() {
     scenario();
-    cy.contains("English").click();
+    cy.get("[data-cy=header-change-language-en]").click();
   });
 
   it("Visits local project and go to users page", function() {
     scenario();
 
-    cy.contains("Users").click();
+    cy.get("[data-cy=header-link-users]").click();
 
     cy.url().should("include", "/users");
   });
@@ -19,15 +19,15 @@ describe("My First Test", function() {
   it("Visits local project and go to hello page", function() {
     scenario();
 
-    cy.contains("Hello").click();
+    cy.get("[data-cy=header-link-hello]").click();
 
     cy.url().should("include", "/hello");
 
-    cy.contains("English").click();
+    cy.get("[data-cy=header-change-language-en]").click();
 
     cy.contains("Welcome to React");
 
-    cy.contains("Español").click();
+    cy.get("[data-cy=header-change-language-es]").click();
 
     cy.contains("Bienvenido a React!");
   });
@@ -35,8 +35,8 @@ describe("My First Test", function() {
   it("Visits local project and go to users page and return at home", function() {
     scenario();
 
-    cy.contains("Users").click();
-    cy.contains("Home").click();
+    cy.get("[data-cy=header-link-users]").click();
+    cy.get("[data-cy=header-link-home]").click();
 
     cy.url().should("include", "/");
   });
