@@ -8,7 +8,9 @@
     "test": "jest --watchAll --no-cache --config ./config/jest.config.json",
     "start": "webpack-dev-server --open --config ./config/webpack.dev.js",
     "build": "webpack --config ./config/webpack.prod.js",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run -- --record"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,7 @@
     "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^2.0.0",
     "css-loader": "^2.1.1",
+    "cypress": "^3.1.5",
     "eslint": "^5.12.1",
     "eslint-config-prettier": "^4.0.0",
     "eslint-loader": "^2.1.2",

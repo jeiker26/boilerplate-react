@@ -1,4 +1,9 @@
 /dist
-/example/dist
 /node_modules
 /coverage
+/.coverage
+/cypress/fixtures
+/cypress/plugins
+/cypress/screenshots
+/cypress/support
+/cypress/videos

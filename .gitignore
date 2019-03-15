@@ -6,6 +6,11 @@
 # testing
 /.coverage
 /coverage
+/cypress/fixtures
+/cypress/plugins
+/cypress/screenshots
+/cypress/support
+/cypress/videos
 
 # misc
 .DS_Store
