@@ -11,3 +11,21 @@
 
 // Helper clases
 @import "utilities/index";
+
+
+svg {
+    display: block;
+    margin: auto;
+}
+
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 3px;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+}
