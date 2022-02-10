@@ -53,7 +53,7 @@
     "jsdom": "^13.2.0",
     "lint-staged": "^8.1.1",
     "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "postcss-loader": "^3.0.0",
     "prettier": "1.16.1",
     "react-hot-loader": "^4.6.5",
